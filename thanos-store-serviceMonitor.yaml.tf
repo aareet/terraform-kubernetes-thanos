@@ -39,5 +39,4 @@ resource "kubernetes_manifest" "servicemonitor_thanos_store" {
       }
     }
   }
-  depends_on = [module.prometheus-operator]
 }
