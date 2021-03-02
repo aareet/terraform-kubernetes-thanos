@@ -127,14 +127,12 @@ resource "kubernetes_manifest" "statefulset_thanos_store" {
               "volumeMounts" = [
                 {
                   "mountPath" = "/var/thanos/store"
-                  "name" = "data"
-                  "readOnly" = false
+                  "name"      = "data"
                 },
               ]
             },
           ]
           "terminationGracePeriodSeconds" = 120
-          "volumes" = []
         }
       }
       "volumeClaimTemplates" = [
