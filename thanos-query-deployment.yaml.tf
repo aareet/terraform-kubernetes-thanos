@@ -12,7 +12,7 @@ resource "kubernetes_manifest" "deployment_thanos_query" {
         "app.kubernetes.io/version" = "v0.17.2"
       }
       "name" = "thanos-query"
-      "namespace" = "thanos"
+      "namespace" = kubernetes_manifest.namespace_thanos.object.metadata.name
     }
     "spec" = {
       "replicas" = 1

@@ -12,7 +12,7 @@ resource "kubernetes_manifest" "servicemonitor_thanos_store" {
         "app.kubernetes.io/version" = "v0.17.2"
       }
       "name" = "thanos-store"
-      "namespace" = "thanos"
+      "namespace" = kubernetes_manifest.namespace_thanos.object.metadata.name
     }
     "spec" = {
       "endpoints" = [
