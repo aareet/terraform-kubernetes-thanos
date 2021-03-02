@@ -7,7 +7,4 @@ terraform {
   }
 
 }
-module "prometheus-operator" {
-  source  = "aareet/prometheus-operator/kubernetes"
-  version = ">=0.0.2"
-}
+
